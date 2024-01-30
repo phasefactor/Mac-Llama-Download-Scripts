@@ -83,12 +83,12 @@ do
     
     _IFS=$IFS
     IFS=$'\n'
-    for line in $(cat checklist.chk)
+    for line in $(cat ${TARGET_FOLDER}"/${MODEL_PATH}"/checklist.chk)
     do
         filehash=$(echo "$line" | cut -d" " -f 1)
         filename=$(echo "$line" | cut -d" " -f 3)
         
-        if [[ $filehash == $(md5 $filename | cut -d" " -f 4) ]]
+        if [[ $filehash == $(md5 ${TARGET_FOLDER}"/${MODEL_PATH}"/$filename | cut -d" " -f 4) ]]
         then
             echo "$filename: OK"
         else
