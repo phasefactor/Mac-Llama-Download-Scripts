@@ -67,8 +67,6 @@ do
     
     echo "Checking checksums"
     
-    cd ${TARGET_FOLDER}"/${MODEL_PATH}"
-    
     _IFS=$IFS
     IFS=$'\n'
     for line in $(cat ${TARGET_FOLDER}"/${MODEL_PATH}"/checklist.chk)
