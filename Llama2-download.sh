@@ -78,8 +78,6 @@ do
     curl -A "wget" ${PRESIGNED_URL/'*'/"${MODEL_PATH}/checklist.chk"} -o ${TARGET_FOLDER}"/${MODEL_PATH}/checklist.chk"
     
     echo "Checking checksums"
-
-    cd ${TARGET_FOLDER}"/${MODEL_PATH}"
     
     _IFS=$IFS
     IFS=$'\n'
